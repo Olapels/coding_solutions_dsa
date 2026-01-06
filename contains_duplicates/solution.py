@@ -2,6 +2,9 @@ from typing import List
 
 class Solution:
     def hasDuplicate(self, nums: List[int]) -> bool:
+        #edge case
+        if len(nums) > 0 and len(nums) <= 1:
+            return False
         #initialize an empty set
         set_array = set()
         for num in nums:
