@@ -14,19 +14,19 @@ class SingleLinkedList:
         self.head = None
 
     def add_value(self,input_value):
-        #checks if the current head is empty and create one with first input
+        #checks if the current head is empty and create one with first input, next will be empty for now
         if self.head is None:
             self.head = SingleNode(input_value)
             return
         
-        #our point takes the head value
+        #current value is initiated with the first input
         current_value = self.head
 
         #if the pointer has a node, set the current value to point to the node from the first
         while current_value.next is not None:
             current_value = current_value.next
         
-        #initiate a new node that connects to an existing one in current
+        #the next input value is set as current_value.next effectively creating a link
         current_value.next = SingleNode(input_value)
         
         #TODO: implement printing logic
