@@ -14,6 +14,7 @@ class SingleLinkedList:
         self.head = None
 
     def add_value(self,input_value):
+        
         #checks if the current head is empty and create one with first input, next will be empty for now
         if self.head is None:
             self.head = SingleNode(input_value)
@@ -22,7 +23,7 @@ class SingleLinkedList:
         #current value is initiated with the first input
         current_value = self.head
 
-        #if the pointer has a node, set the current value to point to the node from the first
+        #current_value.next can only be empty if there is no new input
         while current_value.next is not None:
             current_value = current_value.next
         
