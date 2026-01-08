@@ -32,6 +32,7 @@ class SingleLinkedList:
     
     def print_nodes(self):
 
+        #if head is empty -- no input yet
         if not self.head:
             print("empty linked list")
             return
@@ -41,6 +42,7 @@ class SingleLinkedList:
 
         while current_value:
             nodes_list.append(current_value.value)
+            #set current value to the next, moving pointer one step forward
             current_value = current_value.next
         
         print ("-->".join(nodes_list))
