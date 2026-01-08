@@ -14,7 +14,7 @@ class SingleLinkedList:
         self.head = None
 
     def add_value(self,input_value):
-        
+
         #checks if the current head is empty and create one with first input, next will be empty for now
         if self.head is None:
             self.head = SingleNode(input_value)
@@ -29,5 +29,18 @@ class SingleLinkedList:
         
         #the next input value is set as current_value.next effectively creating a link
         current_value.next = SingleNode(input_value)
+    
+    def print_nodes(self):
+
+        if not self.head:
+            print("empty linked list")
+            return
         
-        #TODO: implement printing logic
+        nodes_list = []
+        current_value = self.head
+
+        while current_value:
+            nodes_list.append(current_value.value)
+            current_value = current_value.next
+        
+        print ("-->".join(nodes_list))
