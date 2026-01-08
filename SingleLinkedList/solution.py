@@ -1,19 +1,21 @@
+from typing import Union
+
 #class for creating nodes
 class SingleNode:
-    def __init__(self,value,next=None):
+    def __init__(self,value:Union[int,str],next=None) -> None:
         self.value = value
         self.next = next
     
-    def __str__(self):
+    def __str__(self) -> str:
         return str(self.value)
 
 class SingleLinkedList:
     
     #initalizing head with none to initate the linked list with no argument
-    def __init__(self):
+    def __init__(self) -> None:
         self.head = None
 
-    def add_value(self,input_value):
+    def add_value(self,input_value:Union[int,str]) -> None:
 
         #checks if the current head is empty and create one with first input, next will be empty for now
         if self.head is None:
@@ -30,7 +32,7 @@ class SingleLinkedList:
         #the next input value is set as current_value.next effectively creating a link
         current_value.next = SingleNode(input_value)
     
-    def print_nodes(self):
+    def print_nodes(self) -> str:
 
         #if head is empty -- no input yet
         if not self.head:
