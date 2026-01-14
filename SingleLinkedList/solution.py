@@ -48,3 +48,22 @@ class SingleLinkedList:
             current_value = current_value.next
         
         print ("-->".join(nodes_list))
+    
+    def search_value(self,search_value):
+        #check that the linked list is not empty
+        if not self.head:
+            return("Empty list")
+        
+        else:
+            #checking if head value is the search value
+            if self.head.value == search_value:
+                return True
+            #incrementing to next node, no need to search head again
+            current_value = self.head.next
+        while current_value:
+            if current_value.value == search_value:
+                return True
+            current_value = current_value.next
+        
+        #return false if we traverse the linked list and cannot find the value
+        return False
