@@ -47,5 +47,18 @@ class DoubleNodelinking:
 
         print('<--'.join(linked_list))
 
+    def search_value(self,search_value):
+        if not self.head:
+            return "Empty list"
+        
+        identifier = self.head
+
+        while identifier is not None:
+            if identifier.value == search_value:
+                return True
+            
+            identifier = identifier.next_node
+        
+        return False
 
 
