@@ -7,3 +7,5 @@ I write about how I approach each problem on LeetCode. Click the links below to 
 ## Solutions
 
 - [88 - Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/solutions/7501784/merge-sorted-array-leetcode-88-by-olapel-1omu)
+
+- [27 - Remove Element](https://leetcode.com/problems/remove-element/solutions/7502078/leetcode-27-remove-element-by-olapels-wvx4)
