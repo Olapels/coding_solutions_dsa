@@ -10,9 +10,7 @@ class Solution:
                 nums[pointer] = nums[n - 1]
                 #reduce the size of what we check
                 n -= 1
-                
             else:
                 # if the value is not the same, just skip and move forward
-                pointer += 1
-                
+                pointer += 1  
         return n
