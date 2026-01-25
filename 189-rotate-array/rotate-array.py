@@ -6,13 +6,12 @@ class Solution:
         n = len(nums)
         if n == 0:
             return
-
-        if k == 0:
-            return
         
-        while k > n:
-            k-=n
+        k %= n
 
+        if k==0:
+            return
+            
         new_nums = [0] * n
         #first k elements on new list from the back k element
         new_nums[:k] = nums[-k:]
