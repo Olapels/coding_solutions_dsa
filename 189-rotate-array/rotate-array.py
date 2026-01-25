@@ -4,12 +4,14 @@ class Solution:
         Do not return anything, modify nums in-place instead
         """
         n = len(nums)
-        if n == 0 or k % n == 0:
+        if n == 0:
             return
-
-        #reduce k to the modular division output of k%n if k >n
+        
         k %= n
 
+        if k==0:
+            return
+            
         new_nums = [0] * n
         #first k elements on new list from the back k element
         new_nums[:k] = nums[-k:]
