@@ -6,8 +6,6 @@ class Solution:
         for sell in range(1,len(prices)):
             if prices[sell] > prices[buy]:
                 profit += prices[sell] - prices[buy]
-
-
             prices[buy] = prices[sell]
         
         return profit
