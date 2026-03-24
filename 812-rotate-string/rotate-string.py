@@ -1,5 +1,7 @@
 class Solution:
     def rotateString(self, s: str, goal: str) -> bool:
+        if len(s) != len(goal):
+            return False
         counter = 0
         while counter < len(s):
             for val in s:
