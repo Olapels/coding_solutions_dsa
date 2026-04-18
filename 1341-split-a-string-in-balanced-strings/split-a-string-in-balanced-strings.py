@@ -1,7 +1,6 @@
 class Solution:
     def balancedStringSplit(self, s: str) -> int:
-        balanced = 0
-        split = 0
+        balanced=split = 0
         for x in range(len(s)):
             if s[x] =='L':
                 balanced+=1
