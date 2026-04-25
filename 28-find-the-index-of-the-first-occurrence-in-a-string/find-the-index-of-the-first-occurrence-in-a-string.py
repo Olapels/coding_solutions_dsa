@@ -7,8 +7,3 @@ class Solution:
             if haystack [alpha : alpha +n_length ] == needle:
                 return alpha
         return -1
-    # def strStr(self,haystack:str, needle:str) -> int:
-    #     if needle in haystack:
-    #         return haystack.index(needle)
-    #     else:        
-    #         return -1
